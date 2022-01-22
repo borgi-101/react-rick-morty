@@ -5,7 +5,9 @@
   "main": "./src/index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "React",
@@ -13,6 +15,8 @@
     "JavaScript",
     "Sass"
   ],
+  "homepage": "https://borgi-101.github.io/react-rick-morty"
+  ,
   "author": "Franco Borgiani contact@franborgiani.com",
   "license": "MIT",
   "devDependencies": {
@@ -21,6 +25,7 @@
     "@babel/preset-react": "^7.16.7",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
+    "gh-pages": "^3.2.3",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.4.6",
